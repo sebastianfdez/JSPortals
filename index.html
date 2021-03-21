@@ -107,10 +107,10 @@
 
       loadTextures() {
         this.brickMaterial = new THREE.MeshPhongMaterial({
-          map: loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/sand.jpg?alt=media&token=f8f57e53-5ef6-4a95-8444-b87fbd8dfc6e'),
+          map: loader.load('./public/resources/images/sand.jpg'),
         });
         this.csm.setupMaterial(this.brickMaterial);
-        const textureSand = loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/sand.jpg?alt=media&token=f8f57e53-5ef6-4a95-8444-b87fbd8dfc6e');
+        const textureSand = loader.load('./public/resources/images/sand.jpg');
         textureSand.wrapS = THREE.RepeatWrapping;
         textureSand.wrapT = THREE.RepeatWrapping;
         textureSand.repeat.set( 50, 50 );
@@ -168,10 +168,10 @@
 
       loadTextures() {
         this.brickMaterial = new THREE.MeshLambertMaterial({
-          map: loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/wall.jpg?alt=media&token=38a2657e-8569-47b9-8f5c-a90d8d6d4b14'),
+          map: loader.load('./public/resources/images/wall.jpg'),
         });
         this.csm.setupMaterial( this.brickMaterial );
-        const textureGrass = loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/grass2.png?alt=media&token=66493972-eadb-4daa-8f52-c797100e0e03');
+        const textureGrass = loader.load('./public/resources/images/grass2.png');
         textureGrass.wrapS = THREE.RepeatWrapping;
         textureGrass.wrapT = THREE.RepeatWrapping;
         textureGrass.repeat.set( 50, 50 );
@@ -184,22 +184,22 @@
       createMaterials() {
         this.loaded = true;
         const loader = new GLTFLoader();
-        loader.load('../../resources/tree/scene.gltf', function (data) {
+        loader.load('./public/resources/tree/scene.gltf', function (data) {
           var object = data.scene;
           const factor = 1.5;
           this.addRandom(object, factor, false);
         }.bind(this));
-        loader.load('../../resources/low_poly_pine/scene.gltf', function (data) {
+        loader.load('./public/resources/low_poly_pine/scene.gltf', function (data) {
           var object = data.scene;
           const factor = 1;
           this.addRandom(object, factor, false);
         }.bind(this));
-        loader.load('../../resources/red_pine/scene.gltf', function (data) {
+        loader.load('./public/resources/red_pine/scene.gltf', function (data) {
           var object = data.scene;
           const factor = 0.015;
           this.addRandom(object, factor, false);
         }.bind(this));
-        loader.load('../../resources/birch_tree/scene.gltf', function (data) {
+        loader.load('./public/resources/birch_tree/scene.gltf', function (data) {
           var object = data.scene;
           const factor = 0.1;
           this.addRandom(object, factor, true);
@@ -247,10 +247,10 @@
 
       loadTextures() {
         this.brickMaterial = new THREE.MeshLambertMaterial({
-          map: loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/wall.jpg?alt=media&token=38a2657e-8569-47b9-8f5c-a90d8d6d4b14'),
+          map: loader.load('./public/resources/images/wall.jpg'),
         });
         this.csm.setupMaterial( this.brickMaterial );
-        const textureGrass = loader.load('https://firebasestorage.googleapis.com/v0/b/lyon-roller-open.appspot.com/o/grass.jpeg?alt=media&token=8a146816-066e-4c64-b25f-119abad746bd');
+        const textureGrass = loader.load('./public/resources/images/grass.jpeg');
         textureGrass.wrapS = THREE.RepeatWrapping;
         textureGrass.wrapT = THREE.RepeatWrapping;
         textureGrass.repeat.set( 50, 50 );
