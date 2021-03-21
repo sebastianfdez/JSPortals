@@ -20,7 +20,7 @@
     import { GLTFLoader } from "https://threejs.org/examples/jsm/loaders/GLTFLoader.js";
     import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
     var loader = new THREE.TextureLoader();
-    loader.setCrossOrigin("");
+    loader.setCrossOrigin("anonymous");
 
     class SceneCreator {
       constructor(scene, bounds, csm, glassX, glassZ) {
@@ -46,7 +46,7 @@
           this.bounds.x[1] * 2 + 1, this.bounds.z[1] * 2 + 1, 1
         );
         this.materialGlass = new THREE.MeshLambertMaterial({
-          map: loader.load('resources/images/glass.jpeg'),
+          map: loader.load('./public/resources/images/glass.jpeg'),
         });
       }
 
